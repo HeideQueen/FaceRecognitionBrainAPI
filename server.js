@@ -21,7 +21,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.get('/', (res) => res.json('You found my API :c'));
+app.get('/', (res) => res.send('You found my API :c'));
 
 app.post('/signin', (req, res) => signin.handleSignin(req, res, knex, bcrypt));
 
